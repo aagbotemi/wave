@@ -40,7 +40,7 @@ const HomePage = ({ currentAccount }) => {
     } */
 
     const openAboutModal = () => {
-        setAboutModal(true);
+        setAboutModal(!aboutModal);
 
 
         console.log(aboutModal);
