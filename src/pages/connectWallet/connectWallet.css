@@ -3,7 +3,7 @@ PAGE TO CONNECT WALLET
  *********************/
 .connect-wallet .connect-wallet-left {
   background: -webkit-linear-gradient(
-    90deg,#667db6,#0082c8,#0082c8,#667db6);
+    90deg,#367db6,#0082c8,#0082c8,#367db6);
   width: 100%;
   text-align: center;
 }
@@ -33,7 +33,7 @@ PAGE TO CONNECT WALLET
     display: flex;
   }
   .connect-wallet .connect-wallet-right button {
-    background: #667db6; /* #0082c8 */
+    background: #367db6;
     border: 1px solid #0082c8;
     cursor: pointer;
     padding: 15px 60px;

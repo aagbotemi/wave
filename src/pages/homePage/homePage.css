@@ -8,18 +8,18 @@ main {
 
 main .main-header {
   padding: 40px 35px 15px;
+  font-family: 'Arima Madurai', cursive;
 }
 
 
 main .main-header .title {
-  font-family: 'Arima Madurai', cursive;
   font-size: 28px;
   font-weight: 600;
 }
 
 main .main-header .wave-length {
   font-size: 30px;
-  background: #667db6;
+  background: #0082c8;
   padding: 0px 16px;
   color: #EEEEEE;
   border-radius: 5px;
@@ -28,7 +28,6 @@ main .main-header .wave-length {
 main .message-container .message-list {
   background-color: #EEEFFF;
   padding: 15px;
-  color: #222;
   width: 90%;
   margin: 8px auto 0;
   border-radius: 8px;
