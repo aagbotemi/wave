@@ -43,7 +43,14 @@ function App() {
       const { ethereum } = window;
 
       if (!ethereum) {
-        alert("Get MetaMask!");
+        // alert("Get MetaMask!");
+        setLoadingWallet(false);
+        toast.dismiss();
+        toast.info("Get MetaMask!", {
+          position: "top-right",
+          pauseOnHover: true,
+          draggable: false,
+        });
         return;
       }
 
