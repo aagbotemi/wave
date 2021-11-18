@@ -1,0 +1,89 @@
+.hero {
+  font-size: 18px;
+  max-width: 1400px;
+  background: -webkit-linear-gradient(
+          90deg,#367db6,#0082c8,#0082c8,#367db6);
+  color: #FFFFFF;
+}
+
+.hero .hero-inner-container {
+  padding: 4.5rem 0rem;
+  margin: 0rem auto 0rem;
+  width: 90%;
+}
+
+.hero .hero-inner-container .open-modal {
+  margin-top: 1.5rem;
+  padding: 8px 70px;
+  border: 1px solid #DDDDDD;
+  font-size: 22px;
+  font-family: 'Arima Madurai', cursive;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 8px;
+  color: #EEEEEE;
+}
+
+.hero .hero-inner-container .open-modal:hover span {
+  transform: rotate(45deg);
+}
+
+.hero .form-sm {
+  position: fixed;
+  bottom: 0;
+  width: calc(100vw);
+  padding: 7px 30px;
+  background: #FDFEFD;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 33%);
+}
+
+.hero form input {
+  width: calc(100% - 52px);
+  padding: 10px;
+  height: 3rem;
+  margin: 1rem auto 0.5rem;
+  outline: none;
+  border: 0;
+  background: rgba(225, 215, 222, 0.25);
+}
+
+.hero form button {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  margin-left: 8px;
+  border: 0;
+  background: rgba(255,212,70,.5411764705882353);
+  border-radius: 20px;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .hero .modal-form {
+        /* For the modal */
+        position: fixed;
+        left: 50%;
+        top: 33.333333%;
+        transform: translate(-50%, 0%);
+        background: #FFFFFF;
+        width: calc(100% - 50%);
+        padding: 20px 30px 40px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+    }
+
+    .hero .modal-form span {
+        font-size: 16px;
+    }
+
+    .hero .modal-form h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .hero form input {
+        width: calc(100% - 60px);
+        margin: 2rem auto 0;
+    }
+}

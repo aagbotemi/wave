@@ -51,11 +51,13 @@ UTILITY CLASS
   .d-lg-none {
     display: none;
   }
-  /* .d-lg-block {
+  /* 
+  .d-lg-block {
     display: none;
   }
+  */
   .d-lg-flex {
     display: block;
-  } */
+  } 
 }
 
