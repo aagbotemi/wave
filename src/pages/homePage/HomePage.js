@@ -4,6 +4,7 @@ import abi from "../../artifacts/contracts/WavePortal.sol/WavePortal.json"
 import Header from './../../components/header/Header'
 import Hero from './../../components/hero/Hero'
 import Profile from '../../assets/images/profile.svg'
+import Footer from '../../components/footer/Footer'
 
 import './homePage.css'
 
@@ -116,6 +117,8 @@ const HomePage = ({ currentAccount }) => {
                     })}
                 </div>
             </main>
+
+            <Footer />
         </div>
     )
 }
