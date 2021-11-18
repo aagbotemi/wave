@@ -14,7 +14,13 @@ function App() {
       const { ethereum } = window;
 
       if (!ethereum) {
-        console.log("Make sure you have metamask!");
+        // console.log("Make sure you have metamask!");
+        toast.dismiss();
+        toast.info("Make sure you have metaMask!", {
+          position: "top-right",
+          pauseOnHover: true,
+          draggable: false,
+        });
         return;
       } else {
         console.log("We have the ethereum object", ethereum);
@@ -31,6 +37,12 @@ function App() {
       }
     } catch (error) {
       console.log(error);
+      toast.dismiss();
+        toast.success(error.message, {
+          position: "top-right",
+          pauseOnHover: true,
+          draggable: false,
+        });
     }
   }
 

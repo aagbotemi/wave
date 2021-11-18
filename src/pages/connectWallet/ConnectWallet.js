@@ -7,6 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ConnectWallet = ({ connectWallet, loadingWallet }) => {
 
+  toast.configure({
+    autoClose: 7000,
+    draggable: true,
+  });
+
   return (
     <section className={"connect-wallet d-flex"}>
       <div className={"connect-wallet-left d-flex justify-center items-center vh-100"}>
