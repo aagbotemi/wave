@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ethers } from 'ethers';
 import ConnectWallet from './pages/connectWallet/ConnectWallet'
 import HomePage from './pages/homePage/HomePage'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -49,12 +51,24 @@ function App() {
 
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
-
       setLoadingWallet(false);
+
+      toast.dismiss();
+      toast.success("You're connected successfully", {
+        position: "top-right",
+        pauseOnHover: true,
+        draggable: false,
+      });
     } catch (error) {
       console.log(error)
-
       setLoadingWallet(false);
+      
+      toast.dismiss();
+      toast.error(error.message, {
+        position: "top-right",
+        pauseOnHover: true,
+        draggable: false,
+      });
     }
   }
 

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { ethers } from 'ethers';
-import abi from "../../artifacts/contracts/WavePortal.sol/WavePortal.json"
+
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './hero.css'
 
@@ -8,11 +11,17 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
     const [loadingWave, setLoadingWave] = useState(false);
     const [message, setMessage] = useState("");
     const [waveCount, setWaveCount] = useState(0);
-    const [modal, setModal] = useState(false)
+    const [modal, setModal] = useState(false);
 
     const openModal = () => {
         setModal(true);
     }
+
+    toast.configure({
+        autoClose: 7000,
+        draggable: true,
+    });
+
 
     const wave = async (e) => {
         e.preventDefault();
@@ -41,20 +50,40 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
                 count = await wavePortalContract.getTotalWaves();
                 console.log("Retrieved total wave count...", count.toNumber());
 
-
                 setLoadingWave(false);
                 setModal(false)
+
+                toast.dismiss();
+                toast.success("Waved Successfully", {
+                    position: "top-right",
+                    pauseOnHover: true,
+                    draggable: false,
+                });
             } else {
                 console.log("Ethereum object doesn't exist!");
 
                 setLoadingWave(false);
                 setModal(false)
+
+                toast.dismiss();
+                toast.error("Ethereum object doesn't exist!", {
+                    position: "top-right",
+                    pauseOnHover: true,
+                    draggable: false,
+                });
             }
         } catch (error) {
             console.log(error);
-
+            
             setLoadingWave(false);
             setModal(false)
+
+            toast.dismiss();
+            toast.error(error.message, {
+                position: "top-right",
+                pauseOnHover: true,
+                draggable: false,
+            });
         }
     }
 
@@ -73,9 +102,21 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
                 setWaveCount(count.toNumber());
             } else {
                 console.log("Ethereum object doesn't exist!");
+                toast.dismiss();
+                toast.error("Ethereum object doesn't exist!", {
+                    position: "top-right",
+                    pauseOnHover: true,
+                    draggable: false,
+                });
             }
         } catch (error) {
             console.log(error)
+            toast.dismiss();
+            toast.error(error.message, {
+                position: "top-right",
+                pauseOnHover: true,
+                draggable: false,
+            });
         }
     }
 
@@ -96,12 +137,12 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
                 </div>
 
                 <button
-                    className={'open-modal d-none d-lg-flex cursor-pointer'}
+                    className={'open-modal d-none d-lg-block cursor-pointer'}
                     onClick={openModal}
                 >Wave <span>👋</span></button>
 
                 {modal && (
-                    <div className={'modal-form form-lg'}>
+                    <div className={'modal-form form-lg d-none d-lg-block'}>
                         <div className={'d-flex items-center justify-between'}>
                             <h3 style={{ color: '#41415a'}}>
                                 Drop a message if you'd like!
