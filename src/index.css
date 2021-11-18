@@ -43,6 +43,9 @@ a {
 .ml-4 {
   margin-left: 1rem;
 }
+.py- {
+  padding: 120px 0rem;
+}
 
 @media only screen and (min-width: 992px) {
   .d-lg-none {

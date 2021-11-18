@@ -20,7 +20,8 @@ const HomePage = ({ currentAccount }) => {
     })*/
 
 
-    const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
+    // const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
+    const contractAddress = "0x057c50505c000805e2F7dcAD0E5deabC2Fd977Cc";
 
     const contractABI = abi.abi;
 
@@ -104,7 +105,9 @@ const HomePage = ({ currentAccount }) => {
                     <div> {" "} </div>
                 </div>
                 <div className={'message-container'}>
-                    {allWaves.map((wave, index) => {
+                    {allWaves.length === 0 
+                    ? <div className={'message-list no-message-list py- text-center'}> No one has waved at me!!! </div>
+                    : allWaves.map((wave, index) => {
                         return (
                             <div /*onClick={() => openMessageModal(index)}*/ key={index} className={'message-list cursor-pointer'}>
                                 <div className={'d-flex items-center justify-between'}>
