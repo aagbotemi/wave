@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import ConnectWallet from './pages/connectWallet/ConnectWallet'
+import HomePage from './pages/homePage/HomePage'
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -57,17 +58,16 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, [])
+
   return (
     <div>
-      {!currentAccount ? (
-          <ConnectWallet loadingWallet={loadingWallet} connectWallet={connectWallet} />
-      ) : (
-        <div className="dataContainer">
-          wAVE
-        </div>
-
-      )}
-
+      {!currentAccount 
+        ? <ConnectWallet loadingWallet={loadingWallet} connectWallet={connectWallet} />
+        : <HomePage currentAccount={currentAccount} />
+      }
     </div>
   );
 }
