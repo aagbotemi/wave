@@ -12,6 +12,10 @@
   width: 90%;
 }
 
+.hero .hero-inner-container p:first-child {
+  font-family: 'Arima Madurai', cursive;
+}
+
 .hero .hero-inner-container .open-modal {
   margin-top: 1.5rem;
   padding: 8px 70px;

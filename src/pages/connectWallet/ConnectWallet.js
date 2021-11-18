@@ -17,7 +17,7 @@ const ConnectWallet = ({ connectWallet, loadingWallet }) => {
                 </div>
               </div>
             </div>
-            <div className={"connect-wallet-right d-none d-lg-block justify-center items-center"}>
+            <div className={"connect-wallet-right d-none justify-center items-center"}>
               <button disabled={loadingWallet} className="cursor-pointer" onClick={connectWallet}>
 
                 {loadingWallet ? <Loading /> : 'Connect Wallet 💳'}

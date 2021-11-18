@@ -1,0 +1,63 @@
+
+main {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto 6rem;
+
+}
+
+main .main-header {
+  padding: 40px 35px 15px;
+}
+
+
+main .main-header .title {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+main .main-header .wave-length {
+  font-size: 30px;
+  background: #667db6;
+  padding: 0px 16px;
+  color: #EEEEEE;
+  border-radius: 5px;
+}
+
+main .message-container .message-list {
+  background-color: #EEEFFF;
+  padding: 15px;
+  color: #222;
+  width: 90%;
+  margin: 8px auto 0;
+  border-radius: 8px;
+}
+main .message-container .message-list:hover {
+  width: 95%;
+}
+
+.address {
+  font-size: 14px;
+  color: #6b7c93;
+  word-break: break-word;
+}
+
+.message {
+  font-size: 18px;
+  color: #41415A;
+  font-weight: 400;
+  word-break: break-word;
+}
+
+.date-time {
+  font-size: 12px;
+  word-break: break-word;
+  text-align: right;
+}
+
+@media only screen and (min-width: 992px) {
+    main {
+        width: 70%;
+    }
+}

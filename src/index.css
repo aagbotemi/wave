@@ -13,6 +13,9 @@ body {
 /************
 UTILITY CLASS
  *************/
+a {
+  text-decoration: none;
+}
 .d-flex {
   display: flex;
 }
@@ -34,28 +37,20 @@ UTILITY CLASS
 .justify-between {
   justify-content: space-between;
 }
-/* 
-
 .text-center {
   text-align: center;
 }
 .ml-4 {
   margin-left: 1rem;
 }
-.ml-2 {
-  margin-left: 8px;
-}
-*/
 
 @media only screen and (min-width: 992px) {
   .d-lg-none {
     display: none;
   }
-  /* 
   .d-lg-block {
-    display: none;
+    display: block;
   }
-  */
   .d-lg-flex {
     display: block;
   } 

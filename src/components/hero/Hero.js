@@ -4,15 +4,15 @@ import abi from "../../artifacts/contracts/WavePortal.sol/WavePortal.json"
 
 import './hero.css'
 
-const Hero = ({ currentAccount }) => {
+const Hero = ({ currentAccount, contractAddress, contractABI }) => {
     const [loadingWave, setLoadingWave] = useState(false);
     const [message, setMessage] = useState("");
     const [waveCount, setWaveCount] = useState(0);
     const [modal, setModal] = useState(false)
   
-    const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
+    // const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
 
-    const contractABI = abi.abi;
+    // const contractABI = abi.abi;
 
     const openModal = () => {
         setModal(true);
