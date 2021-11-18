@@ -23,8 +23,8 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
     });
 
 
-    const wave = async (e) => {
-        e.preventDefault();
+    const wave = async () => {
+        // e.preventDefault();
 
         setLoadingWave(true);
         try {
@@ -38,9 +38,6 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
                 let count = await wavePortalContract.getTotalWaves();
                 console.log("Retrieved total wave count...", count.toNumber());
 
-                /*
-                * Execute the actual wave from your smart contract
-                */
                 const waveTxn = await wavePortalContract.wave(message, { gasLimit: 300000 });
                 console.log("Mining...", waveTxn.hash);
 
