@@ -5,6 +5,7 @@ import Header from './../../components/header/Header'
 import Hero from './../../components/hero/Hero'
 import Profile from '../../assets/images/profile.svg'
 import Footer from '../../components/footer/Footer'
+import AboutModal from '../../components/about/AboutModal'
 
 import './homePage.css'
 
@@ -12,10 +13,12 @@ import './homePage.css'
 const HomePage = ({ currentAccount }) => {
 
     const [allWaves, setAllWaves] = useState([]);
+    const [aboutModal, setAboutModal] = useState(false);
     /*const [messageModal, setMessageModal] = useState({
         show: false, // initial values set to false and null
         index: null,
     })*/
+
 
     const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
 
@@ -26,19 +29,22 @@ const HomePage = ({ currentAccount }) => {
         show: true,
         index,
         });
-
-
-        console.log('Open the Modal', index)
     }
 
     const closeMessageModal = (e) => {
-
         e.stopPropagation();
         setMessageModal({
         show: false,
         id: null
         });
     } */
+
+    const openAboutModal = () => {
+        setAboutModal(true);
+
+
+        console.log(aboutModal);
+    }
 
     const getAllWaves = async () => {
         const { ethereum } = window;
@@ -83,7 +89,7 @@ const HomePage = ({ currentAccount }) => {
   
     return (
         <div>
-            <Header />
+            <Header openAboutModal={openAboutModal} />
 
             <Hero 
                 currentAccount={currentAccount} 
@@ -119,6 +125,9 @@ const HomePage = ({ currentAccount }) => {
             </main>
 
             <Footer />
+
+            <AboutModal aboutModal={aboutModal} setAboutModal={setAboutModal} />
+
         </div>
     )
 }

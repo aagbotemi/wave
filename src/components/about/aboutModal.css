@@ -1,0 +1,55 @@
+.about-modal {
+  position: fixed;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, 0%);
+  background: #FFFFFF;
+  width: calc(100% - 4%);
+  height: calc(100% - 20%);
+  padding: 30px 30px 40px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  overflow-y: auto;
+}
+
+.about-modal .about-container {
+  width: 100%;
+  margin: auto;
+}
+
+.about-modal .about-container .about-content {
+    padding: 0px 20px;
+}
+
+.about-modal .about-container .about-content span {
+  font-family: 'Arima Madurai', cursive;
+  font-weight: 500;
+  font-size: 18px;
+}
+.about-modal .about-container .about-content a {
+  color: #667db6;
+  text-decoration: none;
+}
+
+.about-modal .about-social {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 50px;
+  left: 15px;
+}
+
+.about-modal .about-container .about-social a {
+  text-decoration: none;
+}
+
+.about-modal .about-container .about-social .linkedIn img {
+  color: green;
+  filter: saturate(3);
+}
+
+@media only screen and (min-width: 992px) {
+    .about-modal {
+        width: calc(100% - 40%);
+    }
+}
