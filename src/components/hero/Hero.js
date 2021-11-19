@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './hero.css'
 
-const Hero = ({ currentAccount, contractAddress, contractABI }) => {
+const Hero = ({ currentAccount, contractAddress, contractABI, getAllWaves }) => {
     const [loadingWave, setLoadingWave] = useState(false);
     const [message, setMessage] = useState("");
     const [waveCount, setWaveCount] = useState(0);
@@ -49,6 +49,9 @@ const Hero = ({ currentAccount, contractAddress, contractABI }) => {
 
                 setLoadingWave(false);
                 setModal(false)
+                setMessage("")
+
+                getAllWaves();
 
                 toast.dismiss();
                 toast.success("Waved Successfully", {

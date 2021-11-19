@@ -19,8 +19,6 @@ const HomePage = ({ currentAccount }) => {
         index: null,
     })*/
 
-
-    // const contractAddress = "0x7da3A27D423aCad77C52e4353788D11c60a81fdA";
     const contractAddress = "0x057c50505c000805e2F7dcAD0E5deabC2Fd977Cc";
 
     const contractABI = abi.abi;
@@ -96,6 +94,7 @@ const HomePage = ({ currentAccount }) => {
                 currentAccount={currentAccount} 
                 contractAddress={contractAddress} 
                 contractABI={contractABI} 
+                getAllWaves={getAllWaves} 
             />
 
             <main>
